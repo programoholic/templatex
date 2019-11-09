@@ -1,0 +1,11 @@
+.result-dialog{
+  height:100%;
+    margin:-24px !important;
+}
+
+.space-filler{
+    flex: 1 1 auto;
+}
+.dialog-body{
+    min-height: 300px;
+}

@@ -1,0 +1,13 @@
+<h1 mat-dialog-title class="color-blue">
+  <i class="material-icons" color="primary">delete</i> Delete Template 
+</h1>
+<div mat-dialog-content class="container-fluid">
+    <div>
+     <h4> Are you sure want to delete Template  : {{data?.name}} ? </h4>
+     <p> Users will not be able to use this feature </p>
+    </div>
+</div>
+<div mat-dialog-actions class="pull-right">
+    <button mat-button  cdkFocusInitial [mat-dialog-close]="true" id="loginBtn"> <i class="material-icons" matPrefix>close</i>Cancel</button>  
+    <button mat-button color="warn" (click)="deleteTempl()"> <i class="material-icons" matPrefix>check</i>Confirm</button>
+</div>

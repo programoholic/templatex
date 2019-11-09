@@ -1,0 +1,47 @@
+.menu {
+    cursor: pointer;
+    padding-left: 16px !important;
+}
+li.nav-item.menu {
+    padding: 15px 0;
+}
+.navbar-nav {
+    width: 300px;
+}
+.nav-item>a{
+    text-decoration: none !important;
+    color: inherit !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;    
+}
+.nav-item>a:hover{
+color:white;
+}
+.nav-item{
+    cursor: pointer;
+}
+.navbar-nav li i {
+    padding: 10px 20px 10px 17px;
+    font-size: 23px
+}
+.navbar-nav li span{
+    top: -5px;
+    position: relative;
+}
+li.nav-item {
+    padding: 10px 0;
+}
+.side-menu .nav-item{
+width: 100%;
+}
+li.nav-item.active {
+    color: #fff;
+    background-color: #0e3570;
+}
+.nav-item:hover:not(:first-child),.nav-item a:hover{
+    background-color: #0e3570;
+    color: white;    
+}
+.nav-icon{
+    padding-left: 2px !important;
+}

@@ -1,0 +1,28 @@
+<h1 mat-dialog-title class="color-blue">
+  <i class="material-icons" color="primary">vpn_key</i> Login as Admin
+</h1>
+<div mat-dialog-content class="container-fluid">
+    <form [formGroup]="loginForm">
+        <mat-form-field class="col-md-12">
+          <input type="email" matInput placeholder="Enter email address..."  formControlName="email">
+          <i class="material-icons" matSuffix>email</i> 
+        </mat-form-field>
+        <mat-form-field class="col-md-12">
+          <input type="password" matInput placeholder="Enter password..."  formControlName="password">
+          <i class="material-icons" matSuffix>vpn_key</i>         
+        </mat-form-field>
+      </form>
+      <!-- <mat-chip color="warn" >
+          
+          Invalid Credentials!!  </mat-chip> -->
+          <mat-chip-list class="mat-chip-list-stacked err-chip" *ngIf="invalid">
+              <mat-chip color="warn" style="width:94%; margin-left:15px;background-color:#ed4838 !important; color:#fff !important;">
+                  <i class="material-icons"> close </i> 
+                Invalid Credentials!! 
+              </mat-chip>
+            </mat-chip-list>
+</div>
+<div mat-dialog-actions class="pull-right">
+  <button mat-button color="warn" [mat-dialog-close]="true"> <i class="material-icons" matPrefix>close</i>Cancel</button>
+  <button mat-button color="primary" cdkFocusInitial [disabled]="!loginForm.valid" (click)="loginUser(loginForm.value)" id="loginBtn"> <i class="material-icons" matPrefix>check</i>Login as Admin</button>
+</div>

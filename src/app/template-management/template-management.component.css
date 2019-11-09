@@ -1,0 +1,38 @@
+ .template-container  {
+    width: 96%;
+    margin-left: 2%;
+   }
+   .template-card{
+       border-radius: 0px !important;
+       box-shadow: none !important;
+       padding-left: 0px !important;
+       padding-right: 0px !important;
+       
+   }
+
+.desc{
+  color:rgba(0, 0, 0, 0.54) !important;
+}
+.templ-div{
+  min-height: 65vh;
+}
+.no-row-container{
+  text-align: center;
+  padding: 20px;
+}
+.no-row-container img{
+  height: 200px;
+  width: 200px;
+}
+.no-row-container p{
+ font-size: 15px;
+ color: rgba(0, 0, 0, 0.54);
+}
+.type-badge{
+ width:100%;
+}
+.chip-l{
+  width: 150px !important;
+  text-align: center;
+  display: inline !important;
+}

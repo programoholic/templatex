@@ -1,0 +1,14 @@
+.example-full-width {
+    width: 100%;
+  }
+
+  .add-action button{
+    margin: 5px;
+    width: 120px;
+  }
+  .mat-step-action button{
+    margin-right: 15px !important;
+  }
+  .mat-horizontal-content-container{
+    margin-top:20px !important;
+  }

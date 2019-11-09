@@ -1,0 +1,118 @@
+.template-container  {
+    width: 96%;
+    margin-left: 2%;
+   }
+   .template-card{
+       border-radius: 0px !important;
+       box-shadow: none !important;
+       padding-left: 0px !important;
+       padding-right: 0px !important;
+       /* min-height: 80vh;  */
+       /* background-color: rgb(181, 191, 212); */
+       height:150px;
+   }
+
+.logo-img path {
+    fill:red;
+}
+/* .logo{
+    background-color: red;
+    mask:url('/assets/home/App-Logo.svg') no-repeat center;
+} */
+
+.content-card{
+    height: 200px;
+    margin: 10px;
+    border-radius: 0px;
+    box-shadow:none !important;
+    border: 1px solid;
+}
+.content-icon{
+    height: 100px;
+    width:100px;
+}
+
+.basics{
+    padding: 20px;
+    display: inline-block;
+}
+
+.sec{
+    display: inline-block;
+    float: right;
+    padding: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.template-con-card {
+      border-radius: 0px !important;
+       box-shadow: none !important;
+       padding-left: 0px !important;
+       padding-right: 0px !important;
+       height: 200px;
+}
+.mid-section{
+    margin-top: 20px;
+}
+ .p1{
+ border-bottom: 30px solid #E64B32;
+}
+.p1 h3{
+    color: #E64B32;
+}
+.p1 h6,.p2 h6,.p3 h6{
+    color: #868181;
+}
+ .p2{
+    border-bottom: 30px solid #3F51B6;
+    
+   }
+   .p2 h3{
+    color: #3F51B6;
+    
+   }
+ .p3{
+    border-bottom: 30px solid #51B051;
+   }
+   .p3 h3{ 
+   color: #51B051;
+   }
+   .info-icon{
+       height: 100px;
+       width:100px;
+   }
+   .info-section{
+       height: auto;
+       text-align: center;
+   }
+   .ico{
+    display: inline-block;
+    /* padding: 50px; */
+    text-align: center;
+    padding: 40px;
+   }
+   .ss{
+    display: inline-block;
+    float: right;
+   }
+   .ss-ico{
+    padding: 50px;
+    color: #d0cece;
+    font-size: 40px;
+    /* transform: rotate(30deg); */
+   }
+   .row .col-md-6{
+       margin-bottom: 10px;
+   }
+   .btm-div{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    width: 100%;
+   }
+   .c-holder h4{
+      padding: 4px;
+   }
+   .c-holder p {
+    padding: 8px;
+}

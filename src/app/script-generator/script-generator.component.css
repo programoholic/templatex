@@ -1,0 +1,44 @@
+.template-container  {
+    width: 96%;
+    margin-left: 2%;
+   }
+   .template-card{
+       border-radius: 0px !important;
+       box-shadow: none !important;
+       padding-left: 0px !important;
+       padding-right: 0px !important;
+       
+   }
+
+.desc{
+  color:rgba(0, 0, 0, 0.54) !important;
+}
+.templ-div{
+  min-height: 65vh;
+}
+.script-div{
+margin:10px;
+min-height: 65vh;
+margin-top: 20px;
+}
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mat-expansion-panel-content{
+      min-height: 60vh !important;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  .data-container{
+    height: 30vh;
+  }
+  .action-button-section{
+    padding: 10px;
+  }
+  .accirdion-icon{
+    font-size: 15px;
+    padding-top: 3px;
+    margin-right: 10px;
+  }

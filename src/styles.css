@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css"; */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+/* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-material.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url("./font.css");
+/* *{
+    font-family: 'Akkurat-mono', "Helvetica Neue", Helvetica, sans-serif !important;  
+} */
+.color-blue {
+    color: #0e3570
+}
+.mat-stepper-vertical, .mat-stepper-horizontal, .mat-card , button, .mat-select,.mat-dialog-title ,.mat-input-element,.mat-list-item {
+    font-family: 'Akkurat-mono', "Helvetica Neue", Helvetica, sans-serif !important;
+}
+h1, h2, h3, h4, h5,h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+a , a:hover{
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none
+}
+html ::-webkit-scrollbar {
+    display: none
+}
+.backdropBackground {
+    background-color: #c5c2c2;
+    opacity: 0.6 !important;
+
+  }
+
+  .add-action button{
+    margin: 5px !important;
+    width: 120px !important;
+  }
+
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(60, 138, 255, 0.1); /* Black background with opacity */
+    opacity: 0.5;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: progress; /* Add a pointer on hover */
+}
+  .loader {
+    border: 5px solid #FCDB4B;
+    border-radius: 50%;
+    border-top: 5px solid #f3f3f3;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin .7s linear infinite;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    height:60px;
+    width:60px;
+    margin:0px auto;
+    -webkit-animation: rotation .6s infinite linear;
+    -moz-animation: rotation .6s infinite linear;
+    -o-animation: rotation .6s infinite linear;
+    animation: spin .6s infinite linear;
+    border-left:6px solid rgba(0,174,239,.15);
+    border-right:6px solid rgba(0,174,239,.15);
+    border-bottom:6px solid rgba(0,174,239,.15);
+    border-top:6px solid rgba(0,174,239,.8);
+    border-radius:100%; */
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,9 @@
+<ul class="nav navbar-nav side-menu">
+    <li class="nav-item menu"><i class="icon-menu nav-icon" (click)='openMenu(menuFlag)'></i><span>TemplateX</span></li>
+    <li class="nav-item " [routerLink]="['/HOME/CS_LANDING_PAGE_E']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a><i class="icon-home nav-icon"></i><span>Home</span></a></li>
+    <li class="nav-item " [routerLink]="['/HOME/CS_SCRIPT_GEN_E']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a><i class="icon-circle_add nav-icon"></i><span>Generate Script</span></a></li>
+    <!-- <li class="nav-item " [routerLinkActive]="['active']"><a [routerLink]="['/WT_GIMS_E']"><i class="icon-circle_add nav-icon"></i><span>Initiate</span></a></li> -->
+    <li class="nav-item" [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact:true}"><a><i class="icon-application nav-icon"></i><span>My Applications</span></a></li>
+    <li class="nav-item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a><i class="icon-knowledge nav-icon"></i><span>My Tasks</span></a></li>
+    <li class="nav-item " *ngIf="userIsAdmin()" [routerLink]="['/HOME/CS_MANAGE_TEMPLATE_E']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a><i class="icon-task nav-icon"></i><span>Template Managment</span></a></li>
+</ul>

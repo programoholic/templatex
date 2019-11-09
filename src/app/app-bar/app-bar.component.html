@@ -1,0 +1,15 @@
+  <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand color-blue" [routerLink]="['/WT_GIMS_E']"> 
+                <i class="color-blue icon material-icons">flash_on</i>            
+               <span class="logo-text"> TemplateX </span>
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right color-blue side-widgets">
+            <!-- <li><a href="#"><i class="icon-info color-blue"></i></a></li>  -->
+            <li  [matTooltip]="getTitle()"
+            matTooltipPosition="before"><a class="icon-logout nav-icon color-blue" (click)="performAction()"></a></li>
+        </ul>
+      </div>
+    </nav>

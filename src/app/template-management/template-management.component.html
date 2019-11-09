@@ -1,0 +1,65 @@
+<section class="template-container">
+  <mat-card class="template-card">
+    <mat-card-header>
+      <mat-card-title class="color-blue">Template Dashboard</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="conatiner-fluid templ-div" *ngIf="templates.length!=0">
+        <mat-list>
+          <h3 mat-subheader>List of Templates for Myriad</h3>
+          <mat-list-item *ngFor="let template of pagedTemplate">
+              <!-- <img matListAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"> -->
+              <img matListAvatar src="./assets/docs.png" alt="Photo of a Shiba Inu">
+              <h3 matLine> {{template.name}} </h3>
+              <p matLine>
+                <span class="desc"> {{template.description}} </span>
+               
+              </p>
+              <div class="type-badge">
+                <mat-chip-list>
+                  <mat-chip class="chip-l">{{(template.activeFlag)?"Active":"Inactive"}}</mat-chip>
+                </mat-chip-list>
+              </div>
+              
+                <button mat-icon-button color="warn" class="pull-right" (click)="deleteTemplate(template)" >
+                    <i class="material-icons">delete</i>
+                  </button> 
+                  <button mat-icon-button color="accent" class="pull-right" (click)="openActionDialog('view',template)">
+                      <i class="material-icons">info</i>
+                    </button>
+                  <button mat-icon-button color="primary" class="pull-right" (click)="openActionDialog('edit',template)">
+                      <i class="material-icons">edit</i>
+                    </button> 
+            <mat-divider></mat-divider>              
+            </mat-list-item>
+        </mat-list>
+        <mat-paginator [length]="pageLength"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="pageEvent = OnPageChange($event)"
+              >
+        </mat-paginator>
+      </div>
+      <div class="conatiner-fluid templ-div" *ngIf="templates.length===0">
+            <div class="no-row-container">
+                 <img src = "./assets/docs.png"/>
+                 <p>
+                  Looks Like there are no templates Currently! 
+                </p>
+                <p>
+                 Templates are created by admin using this screen. Click on Add button to get started
+                </p>
+            </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button 
+             color="primary" 
+             style="margin-right: 20px;"
+             (click)="openActionDialog('create',template)"
+             >
+        <i class="material-icons">add</i> Add New Template</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

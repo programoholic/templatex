@@ -1,0 +1,189 @@
+<!-- <section class="template-container">
+  <mat-card class="template-card">
+    <mat-card-header>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="conatiner-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo">
+
+            </div>
+            <div class="icon">
+  <i class="material-icons">
+      flash_on
+                    </i>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h1>
+              Build a Better and Business and Faster
+            </h1>
+            <p>
+
+              You can try to adjust the hight of your texarea by applying matTextareaAutosize and assigning values for properties matAutosizeMinRows
+              and matAutosizeMaxRows
+            </p>
+          </div>
+        </div>
+        <div class="row" style="margin-top:20%">
+            <div class="col-md-4">
+             <mat-card class="content-card">
+               <div>
+                   Download Template File
+                 </div>
+                 <div>
+                    <img class="content-icon" src="./assets/home/download.svg">
+                 </div>
+             </mat-card>
+             
+            </div>
+            <div class="col-md-4">
+                <mat-card class="content-card">
+                    <div>
+                       Upload Data
+                      </div>
+                      <div>
+                         
+                          <img class="content-icon" src="./assets/home/upload.svg">                          
+                          
+                       </div>
+                  </mat-card>
+            </div>
+            <div class="col-md-4">
+                <mat-card class="content-card">
+                    <div>
+                        Generate
+                      </div>
+                      <div>
+                         
+                          <img class="content-icon" src="./assets/home/hydro-power.svg">                                                    
+                       </div>
+                  </mat-card>
+            </div>
+          </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+    </mat-card-actions>
+  </mat-card>
+</section> -->
+
+<section class="template-container">
+ <div class="row">
+   <div class="col-md-6">
+      <mat-card class="template-card">
+        <div class="basics">  
+        <h4>Welcome to TemplateX</h4>
+          <span>No Of Views </span>
+        </div>
+        <div class="sec">
+            <span> {{viewCount}} </span>
+        </div>
+        </mat-card>
+   </div>
+   <div class="col-md-6">
+      <mat-card class="template-card">
+          <div class="basics">  
+              <h4>Active</h4>
+              <i class="material-icons" style="color:green; position:absolute">fiber_manual_record</i> 
+                <span style="padding-left:30px">Currrently Active Users</span>
+              </div>
+              <div class="sec">
+                  <span> {{userCount}} </span>
+              </div>
+        </mat-card>
+   </div>
+ </div>
+ <div class="row mid-section">
+    <div class="col-md-4">
+        <mat-card class="template-con-card p1">
+          <div class="ico">
+            <h3> {{featureCount}} </h3>
+            <h6> {{featureName}}</h6>
+          </div>
+          <div class="ss">
+             <i class="material-icons ss-ico">assignment_turned_in</i>
+          </div>
+          <div class="btm-div">
+                <p> % Change 
+                    <span style="float:right"> <i class="material-icons">
+                        bar_chart
+                        </i> </span>
+                </p>
+              
+          </div>
+        </mat-card>
+    </div>
+    <div class="col-md-4">
+        <mat-card class="template-con-card p2">
+            <div class="ico">
+                <h3> {{templCount}} </h3>
+                <h6> {{templName}}</h6>
+              </div>
+              <div class="ss">
+                 <i class="material-icons ss-ico">assignment</i>
+              </div>
+              <div class="btm-div">
+                  <p> % Change 
+                      <span style="float:right"> <i class="material-icons">
+                          bar_chart
+                          </i> </span>
+                  </p>
+                
+            </div>
+          </mat-card>
+      </div>
+      <div class="col-md-4">
+          <mat-card class="template-con-card p3">
+              <div class="ico">
+                  <h3> {{scriptCount}} </h3>
+                  <h6> {{scriptName}}</h6>
+                </div>
+                <div class="ss">
+                   <i class="material-icons ss-ico">description</i>
+                </div>
+                <div class="btm-div">
+                    <p> % Change 
+                        <span style="float:right">  
+                          <i class="material-icons">
+                            bar_chart
+                            </i> </span>
+                    </p>
+                  
+              </div>
+            </mat-card>
+        </div>
+ </div>
+ <div class="row mid-section">
+    <mat-card class="template-card info-section">
+        <!-- <div class="basics">   -->
+        <h3 class="color-blue">How It Works</h3>
+       <div class="row">
+         <div class="col-md-4">
+             <div class="c-holder">
+               <h4> Download Template </h4>
+              <img  src="./assets/dn.svg" class="info-icon" alt="download template">  
+              <p> Download the template file For a feature. </p>             
+             </div>
+         </div>
+         <div class="col-md-4">
+            <div class="c-holder">
+                <h4> Upload the Data </h4>
+               <img  src="./assets/uupload.svg" class="info-icon" alt="download template">   
+              <p> Fill the data in the  the template file and upload back. </p>                                        
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="c-holder">
+                  <h4> Generate Script </h4>
+                 <img  src="./assets/gnrt.svg" class="info-icon" alt="download template">   
+              <p> Generate ready to execute script on a single click.   </p>                                                                     
+                </div>
+            </div>
+       </div>   
+        
+      </mat-card>
+ </div>
+</section>

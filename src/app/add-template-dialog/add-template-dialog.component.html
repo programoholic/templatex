@@ -1,0 +1,135 @@
+<h1 mat-dialog-title class="color-blue">
+  <i class="material-icons">add</i> Add Template
+</h1>
+<div mat-dialog-content class="dialog-content"> 
+  <mat-horizontal-stepper [linear]="true" #stepper class="stepper-content">
+      <ng-template matStepperIcon="edit">
+          <mat-icon class="testttt"> done</mat-icon>
+        </ng-template>
+      <mat-step [stepControl]="addTemplateMetaInfoForm">
+        <form [formGroup]="addTemplateMetaInfoForm">
+          <ng-template matStepLabel>Meta information</ng-template>
+          <div class="row">
+          <div class="col-md-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Template name</mat-label>                
+                  <input matInput name="name"  placeholder="Enter Template Name..."  formControlName="name">
+                </mat-form-field>
+          </div>
+          <div class="col-md-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Template Description</mat-label>
+                  <textarea matInput 
+                            placeholder="Enter Temlpate Description..." 
+                            formControlName="description"
+                            matTextareaAutosize 
+                            matAutosizeMinRows=5 
+                            matAutosizeMaxRows=10
+                            ></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+          <div class="mat-step-action">
+            <button mat-mini-fab color="" matStepperNext [disabled]="!addTemplateMetaInfoForm.valid">
+              <i class="material-icons">keyboard_arrow_right</i>
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="addTemplateScriptForm">
+        <form [formGroup]="addTemplateScriptForm">
+          <ng-template matStepLabel>
+            Template Script
+          </ng-template>
+          <div class="row">
+            <div class="col-md-7">
+              <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Template Script</mat-label>                
+                  <textarea matInput 
+                            placeholder="Enter Temlpate Script" 
+                            formControlName="templateScript"
+                            matTextareaAutosize 
+                            matAutosizeMinRows=10 
+                            matAutosizeMaxRows=15
+                            ></textarea>
+                </mat-form-field>
+          </div>
+          <div class="col-md-1">
+                 OR
+          </div>
+          <div class="col-md-3">
+             <app-fileupload [accept]="txt" (fileData)='parseTemplateScript($event)'></app-fileupload>
+           </div>
+          </div>
+         <div class="mat-step-action">
+          <button mat-mini-fab color="" matStepperPrevious>
+              <i class="material-icons">keyboard_arrow_left</i>
+          </button>
+          <button mat-mini-fab color="" matStepperNext>
+            <i class="material-icons">keyboard_arrow_right</i>
+          </button>
+         </div>
+            
+         
+        </form>
+      </mat-step>
+      <mat-step>
+          <form [formGroup]="addTemplateFileForm">
+              <ng-template matStepLabel>
+                Template File
+              </ng-template>
+              <div class="row">
+                <div class="col-md-7">
+                  <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Template File</mat-label>                                    
+                      <textarea matInput 
+                                placeholder="Enter Temlpate File" 
+                                formControlName="templateFile"
+                                matTextareaAutosize 
+                                matAutosizeMinRows=10 
+                                matAutosizeMaxRows=15
+                                ></textarea>
+                    </mat-form-field>
+              </div>
+              <div class="col-md-1">
+                     OR
+              </div>
+              <div class="col-md-3">
+                 <app-fileupload [accept]="txt" (fileData)='parseTemplateFile($event)'></app-fileupload>
+               </div>
+              </div>
+             <div class="mat-step-action">
+                <button mat-mini-fab color="" matStepperPrevious>
+                    <i class="material-icons">keyboard_arrow_left</i>
+                </button>
+              <!-- <button mat-button matStepperPrevious>
+                  <i class="material-icons">keyboard_arrow_left</i>
+                Back
+              </button> -->
+              <button mat-mini-fab color="" matStepperPrevious (click)="stepper.reset()">
+                  <i class="material-icons">refresh</i>
+              </button>
+              <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+             </div>
+            </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+</div>
+<div mat-dialog-actions class="add-action" align="end">
+  <button mat-flat-button [mat-dialog-close]="" color="warn" (click)="onNoClick()" cdkFocusInitial>
+  <i class="material-icons">close</i>
+    Close
+  </button>
+  <button mat-flat-button color="accent" 
+  [disabled] = "!(addTemplateFileForm.valid && addTemplateMetaInfoForm.valid && addTemplateScriptForm.valid)"
+  >
+      <i class="material-icons">verified_user</i>  
+    Validate
+  </button>
+  <button mat-flat-button color="primary" (click)="saveTemplate()"
+  [disabled] = "!(addTemplateFileForm.valid && addTemplateMetaInfoForm.valid && addTemplateScriptForm.valid)"
+  >
+      <i class="material-icons">check</i>  
+    Save
+  </button>
+</div>

@@ -1,0 +1,41 @@
+.side-widgets li {
+    padding-left: 20px;
+}
+.avtar{
+    width: 22px;
+    border-radius: 50%
+}
+.side-widgets {
+    position: relative;
+    top: 5px;
+}
+.side-widgets li a {
+    font-size: 22px;
+}
+
+.mat-sidenav-container {
+    background: rgba(172, 32, 32, 0.08);
+  }
+  .bg-light {
+    background-color: #fff !important;
+    border-radius: 0px;
+}
+  .blank-grow {
+    flex: 1 1 auto;
+  }
+  .icon-logout{
+    margin-top: -5px;
+  }
+  .icon{
+    border-radius: 50%;
+    /* padding: 10px; */
+    border: 1px solid #0e3570;
+    border-style: dashed;
+    /* font-size: 340px; */
+    padding: 8px;
+    margin-right: 12px;
+    margin-top: -10px;
+  }
+  .logo-text{
+      position: absolute;
+  }

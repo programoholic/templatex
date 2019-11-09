@@ -1,0 +1,25 @@
+<button mat-raised-button
+        (click)="onClick($event)"
+>
+  <i class="material-icons">attachment</i>
+  {{chooseLabel}}</button>
+<input #fileUpload
+       type="file"
+       class="input_fileupload--hidden"
+       (input)="onInput($event)"
+       (change)="onFileSelected($event)"
+       [(ngModel)]="inputFileName"
+       [accept]="accept"
+>
+
+<div *ngFor="let f of files">
+  <span>{{f.name}}</span>
+  <button mat-icon-button
+          color="primary"
+          [attr.title]="deleteButtonLabel?deleteButtonLabel:null"
+          (click)="removeFile(event,f)"
+  >
+    <!-- <mat-icon></mat-icon> -->
+  <i class="material-icons">{{deleteButtonIcon}}</i>    
+  </button>
+</div>

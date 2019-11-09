@@ -1,0 +1,10 @@
+<!-- <mat-toolbar color="primary" class="menu-bar" [class.mat-elevation-z4]="true">{{title}}</mat-toolbar> -->
+<section [ngClass]="{'menuActive': menuStatus}">
+        <aside>
+          <app-side-nav-menu (slideMenu)="menuSlide($event)"></app-side-nav-menu>
+        </aside>
+        <article>
+         <app-app-bar></app-app-bar>
+          <router-outlet></router-outlet>
+        </article>
+</section>

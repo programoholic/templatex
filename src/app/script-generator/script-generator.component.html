@@ -1,0 +1,96 @@
+<section class="template-container">
+    <mat-card class="template-card">
+      <mat-card-header>
+        <mat-card-title class="color-blue">Script Generator</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="conatiner-fluid script-div">
+            <mat-accordion class="example-headers-align">
+                <mat-expansion-panel [expanded]="true">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <i class="material-icons accirdion-icon">account_balance</i>
+                      Application Utility
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Available features
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+              
+                  <div class="row util-container">
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Feature</mat-label> 
+                            <mat-select [(ngModel)]="selected" name="feature" required>
+                              <mat-option *ngFor="let option of options" [value]="option">{{option.name}}</mat-option>
+                            </mat-select>
+                            <!-- <input type="text" placeholder="Select the feature " aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                            <mat-autocomplete #auto="matAutocomplete">
+                              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                              </mat-option>
+                            </mat-autocomplete> -->
+                          </mat-form-field>
+                    </div> 
+                  </div>
+                  <div class="row action-button-section">
+                    <div class="col-md-5">
+                        <!-- <button mat-stroked-button 
+                        color="primary" 
+                        style="margin-right: 20px;"
+                        (click)="openCreateDialog()"
+                        >
+                   <i class="material-icons">attach_file</i> Upload File</button> -->
+                   <app-fileupload [accept]="txt" (fileData)='parseTemplateFile($event)'></app-fileupload>
+                    </div>
+                    <div class="col-md-2">
+                            <h5> OR </h5>
+                      </div>
+                      <div class="col-md-5">
+                          <button mat-stroked-button 
+                          color="primary" 
+                          style="margin-right: 20px;"
+                          (click)="openCreateDialog()"
+                          >
+                     <i class="material-icons">add</i> Add Manually</button>
+                      </div>
+                  </div>
+                  <div class="data-container">
+                      <ag-grid-angular
+                      #agGrid
+                      style="width: 100%; height: 100%;"
+                      [gridOptions]="dataGridOptions"
+                      id="myGrid"
+                      class="ag-theme-material"
+                      [columnDefs]="columnDefs"
+                      [rowSelection]="rowSelection"
+                      [rowData]="rowData"
+                      (selectionChanged)="onSelectionChanged($event)"
+                      (gridReady)="onGridReady($event)"
+                      [defaultColDef]="defaultColDef"
+                      [pagination]="true"
+                       [paginationAutoPageSize]="true"
+                    ></ag-grid-angular>
+                  </div>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </div>
+      </mat-card-content>
+      <mat-card-actions align="end">
+          <button mat-stroked-button 
+       
+          style="margin-right: 20px;"
+          (click)="downloadTemplate()"
+          >
+     <i class="material-icons">vertical_align_bottom</i> Download Template </button>
+        <button mat-flat-button 
+               color="primary" 
+               style="margin-right: 20px;"
+               (click)="generateScript()"
+               >
+          <i class="material-icons">code</i> Generate Script</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+  

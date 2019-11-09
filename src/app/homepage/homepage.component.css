@@ -1,0 +1,39 @@
+section{
+    height: inherit;    
+}
+section, aside {
+    transition: width 1.25s;
+}
+article, menuActive > article  {
+    transition: padding 1.25s;
+}
+aside {
+    background-color: #ffda29;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    position: fixed;
+    width: 60px;
+    z-index: 99;
+}
+article { width: 100%; min-height: 1000px; overflow: hidden; float: left; 
+    background-color: #f0f0f0; box-shadow: 0px 0px 7px -2px #333 inset;
+    padding-left: 60px;
+}
+.menuActive > article {
+    padding-left: 200px;  
+}
+.menuActive > aside {
+    width: 200px;    
+}
+app-appbar {
+    box-shadow: 0px 0px 7px -2px #000;
+    display: block;
+    margin-bottom: 30px
+}
+app-gims-app-screen {
+    padding: 20px 0;
+    display: block;
+    min-height: 800px;
+}

@@ -1,0 +1,23 @@
+/* mat-palette accepts $palette-name, main, lighter and darker variants */
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+@import '~@angular/material/theming';
+
+/* always include only once per project*/
+@include mat-core();
+
+$gims-app-primary: mat-palette($mat-blue,500,900,A100);
+$gims-app-accent:  mat-palette($mat-yellow, 500, A200, A100);
+$gims-app-warn:    mat-palette($mat-red,500,900,A100);
+
+
+ /*Create the theme object (a Sass map containing all of the palettes).*/
+$gims-app-theme: mat-light-theme($gims-app-primary, $gims-app-accent, $gims-app-warn);
+
+/* Include theme styles for core and each component used in your app. Alternatively, you can import and @include the theme mixins for each component that you are using.*/
+@include angular-material-theme($gims-app-theme);
+
+
+.color-primary {
+    color: mat-color($gims-app-primary);
+  }

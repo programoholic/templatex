@@ -1,0 +1,16 @@
+<section class="result-dialog">
+  <div class="dialog-header">
+<mat-toolbar color=""> 
+  Generated Script
+  <span class="space-filler"> </span>
+  <button mat-icon-button color=""><mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">close</mat-icon> </button>
+</mat-toolbar>
+  </div>
+  <div class="dialog-body">
+      <pre><code [highlight]="code" (highlighted)="onHighlight($event)"></code></pre>
+  </div>
+  <div class="dialog-footer add-action" align="right">
+      <button mat-stroked-button color=""><mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">file_copy</mat-icon> Copy </button>
+      <button mat-stroked-button color=""><mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">vertical_align_bottom</mat-icon> Download</button>
+    </div>
+</section>
